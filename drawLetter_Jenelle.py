@@ -1,4 +1,3 @@
-
 """" 
 draws the letter J using Turtle 
 """
