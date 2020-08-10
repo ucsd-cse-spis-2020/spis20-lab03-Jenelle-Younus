@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 """" 
 draws the letter J using Turtle 
 """
@@ -23,9 +22,3 @@ turtle1 = turtle.Turtle()
 turtle2 = turtle.Turtle()
 drawJ(turtle1)
 drawJ(turtle2)
-=======
-
->>>>>>> origin/master
-=======
-
->>>>>>> origin/master

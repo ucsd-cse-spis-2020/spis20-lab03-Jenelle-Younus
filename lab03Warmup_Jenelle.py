@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 import turtle
 
 # draws a square
@@ -43,10 +41,5 @@ turtle1.forward(100)
 turtle2.left(90)
 
 turtle2.forward(100)
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
-=======
->>>>>>> origin/master
+
 
