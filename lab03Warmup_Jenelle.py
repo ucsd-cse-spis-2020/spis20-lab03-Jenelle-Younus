@@ -1,3 +1,7 @@
+"""
+    Jenelle Truong
+    Testing out given turtle code
+"""
 import turtle
 
 # draws a square

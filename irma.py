@@ -1,3 +1,4 @@
+# Jenelle Truong and Younus Ahmad
 import turtle
 import csv
 
@@ -37,8 +38,11 @@ def irma_setup():
         
 
 def irma():
-    """Animates the path of hurricane Irma
     """
+    Animates the path of hurricane Irma by iterating through each
+    data point in irma.csv
+    """
+
     # Do not change this line
     # t is the turtle, and you will not need the other variables
     (t, wn, map_bg_img) = irma_setup()
@@ -50,7 +54,6 @@ def irma():
         # This line gives you an "iterator" you can use to get each line
         # in the file.
         pointreader = csv.reader(csvfile)
-
         # You'll need to add some code here, before the loop
         # One thing you'll need to figure out how to do is to
         # skip the first line of the file (which is the header).
@@ -58,25 +61,43 @@ def irma():
         # look into Python's built-in next function
         #(https://docs.python.org/3/library/functions.html#next)
         # pointreader is an iterator
-
+        next(pointreader)
+        t.penup()
+        t.setpos(-30.3, 16.4)   #Moves turtle onto screen
+        t.pendown()
         for row in pointreader:
             # row is a list representing each line in the csv file
             # Each comma separated element is in its own index position
-            # This code just prints out the date and time elements of each
-            # row in the file.
-            # Make sure you understand what is happening here.
-            # Then, you'll need to change this code
+            t.setpos(float(row[3]), float(row[2]))  #Moves turtle to appropriate lat/log
+            hurCategory(t, float(row[4])) #changes pen size and color and adds hurricane category 
             print("Date:", row[0], "Time:", row[1])
-
-
-
     # Hack to make sure a reference to the background image stays around
     # Do not remove or change this line
     return map_bg_img
 
 
 # Feel free to add "helper" functions here
-
-
+"""
+This function checks the hurricane windspeed at each data point, assigns appropriate category/color
+"""
+def hurCategory(t, wSpeed):   #Prints category based on wind speed in data set
+    if wSpeed >= 157:
+        t.pen(pencolor = "red", pensize = "18")
+        t.write("5")
+    elif wSpeed >= 130 and wSpeed <= 156:
+        t.pen(pencolor = "Orange", pensize = "12")
+        t.write("4")
+    elif wSpeed >= 111 and wSpeed <= 129:
+        t.pen(pencolor = "yellow", pensize = "9")
+        t.write("3")
+    elif wSpeed >= 96 and wSpeed <= 110:
+        t.pen(pencolor = "green", pensize = "6")
+        t.write("2")
+    elif wSpeed >= 74 and wSpeed <= 95:
+        t.pen(pencolor = "blue", pensize = "3")
+        t.write("1")
+    else:
+        t.pen(pencolor = "white", pensize = "1")
+        
 if __name__ == "__main__":
     bg=irma()

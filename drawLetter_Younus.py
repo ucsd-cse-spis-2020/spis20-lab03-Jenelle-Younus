@@ -1,4 +1,7 @@
-"""This program will draw my first Initial "Y"""
+"""
+Younus Ahmad
+This program will draw my first Initial "Y"
+"""
 
 
 import turtle

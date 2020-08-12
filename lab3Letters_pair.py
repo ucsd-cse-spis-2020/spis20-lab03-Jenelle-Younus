@@ -1,4 +1,5 @@
 """
+Jenelle Truong and Younus Ahmad
 1.The "anonymous turtle" is a turtle object that is implemented in python by default when a specific turtle is not instantiated or used to call the function.
 2.Turtle() is a function call to create the object that references a specifically created turtle object, while turtle directs it to the turtle library built automatically into python.
 3.myTurtle.sety(100)
